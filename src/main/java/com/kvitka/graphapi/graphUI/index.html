@@ -1,0 +1,109 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Graph UI</title>
+    </head>
+    <body>
+
+        <p id="info">Вершин: 0; Рёбер: 0</p>
+
+        <div id="canvas" style="display: inline-block"></div>
+
+        <div class="buttons" style="display: inline-block">
+
+            <div class="create">
+                <button onclick="completeGraph()">Сделать граф полным</button>
+                <button onclick="addVertex()">Добавить вершину</button>
+                <div>
+                    <label for="weightOfEdge"></label>
+                    <input
+                        class="numberInp"
+                        type="number"
+                        id="weightOfEdge"
+                        style="width: 120px"
+                        placeholder="Вес ребра"
+                    />
+                    <button onclick="setWeight()">Изменить вес ребра</button><br/>
+                    <button onclick="addEdge()">Создать ребро</button>
+                    <label for="vertexOfNewEdge1"></label>
+                    <input
+                        class="numberInp"
+                        type="number"
+                        id="vertexOfNewEdge1"
+                        placeholder="Вершина 1"
+                    />
+                    <label for="vertexOfNewEdge2"></label>
+                    <input
+                        class="numberInp"
+                        type="number"
+                        id="vertexOfNewEdge2"
+                        placeholder="Вершина 2"
+                    />
+                </div>
+            </div>
+
+            <div class="delete">
+                <button onclick="clearGraph()">Очистить</button>
+                <button onclick="deleteEdges()">Удалить все рёбра</button>
+                <div>
+                    <label for="vertexOfEdgeToDelete1"></label>
+                    <input
+                            class="numberInp"
+                            type="number"
+                            id="vertexOfEdgeToDelete1"
+                            placeholder="Вершина 1"
+                    />
+                    <label for="vertexOfEdgeToDelete2"></label>
+                    <input
+                            class="numberInp"
+                            type="number"
+                            id="vertexOfEdgeToDelete2"
+                            placeholder="Вершина 2"
+                    />
+                    <button onclick="deleteEdge()">Удалить ребро</button>
+                </div>
+                <button onclick="deleteLastVertex()">Удалить последнюю вершину</button>
+                <div>
+                    <input
+                        class="numberInp"
+                        type="number"
+                        id="vertexToDelete"
+                        placeholder="Вершина"
+                    >
+                    <label for="vertexToDelete">
+                        <button onclick="deleteDefiniteVertex()">Удалить определённую вершину</button>
+                    </label>
+                </div>
+            </div>
+
+            <div class="file">
+                <div>
+                    <button onclick="loadGraph_matrix()">Загрузить граф из файла (матрица смежности)</button>
+                    <button onclick="saveGraph_matrix()">Сохранить граф в файл (матрица смежности)</button>
+                </div>
+                <label for="filepathInput"></label>
+                <input
+                    id="filepathInput"
+                    style="width: 500px;"
+                    placeholder="Путь к файлу"
+                >
+                <div>
+                    <button onclick="loadGraph_edgeList()">Загрузить граф из файла (список рёбер)</button>
+                    <button onclick="saveGraph_edgeList()">Сохранить граф в файл (список рёбер)</button>
+                </div>
+            </div>
+
+            <div class="task">
+                <button onclick="alert(
+                '16. Определить, существует ли в графе две вершины степени ' +
+                '3 с количеством вершин не менее 4-х смежные между собой.'
+                )"><b>?</b></button>
+                <button onclick="additionalTask()">Дополнительное задание</button>
+                <button onclick="toggleEdgesWeight()">Скрыть/показать веса рёбер</button>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="logic.js"></script>
+    </body>
+</html>

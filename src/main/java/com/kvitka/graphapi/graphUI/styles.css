@@ -1,0 +1,200 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#canvas {
+    width: 800px;
+    height: 800px;
+    transform: translateX(-50%);
+    margin-left: 400px;
+    margin-right: -400px    ;
+    border: 2px solid black;
+}
+
+.vertex {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index: 11;
+    background: black;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.vertex:hover {
+    box-shadow: 0 0 12px 2px rgba(0, 176, 255, 0.9);
+}
+.chosenVertex {
+    border: yellow;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edge {
+    color:      rgba(0, 0, 0, 0.5);
+    border:     rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.5);
+    height: 4px;
+    position: absolute;
+    display: block;
+    transform-origin: center center;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.edge:hover {
+    color: #054a95;
+    background: #054a95;
+    box-shadow: 0 0 12px 0 rgba(0, 176, 255, 0.7);
+    z-index: 10;
+}
+
+.edge:hover .edgeWeight {
+    background: #ffff5a;
+}
+
+.lightingVertex {
+    box-shadow: 0 0 12px 3px rgba(255, 191, 0, 0.7);
+    border: 1px solid #4b250d;
+    background: #fc672c;
+}
+
+.buttons {
+    width: 600px;
+}
+
+.buttons * {
+    margin: 5px;
+}
+
+.buttons div {
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+.buttons div div {
+    width: fit-content;
+}
+
+.buttons input {
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.buttons button {
+    font-size: 22px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+    font-family: Calibri, serif;
+    cursor: pointer;
+}
+.buttons button:active {
+    transition: none;
+}
+
+.edgeWeight {
+    background: white;
+    border: 1px solid black;
+    position: absolute;
+    color: black;
+    font-family: Consolas, serif;
+    padding: 2px;
+    margin: 0;
+    z-index: 3;
+}
+
+.numberInp {
+    width: 125px;
+}
+
+.create button {
+    background: #32ff57;
+}
+.create button:hover {
+    background: #26cd41;
+}
+.create button:active {
+    background: #166d26;
+    transition: none;
+}
+
+.delete button {
+    background: #ff3333;
+    color: yellow;
+}
+.delete button:hover {
+    background: #bf2424;
+}
+.delete button:active {
+    background: #892222;
+    transition: none;
+}
+
+.file {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.file div {
+    margin: 0;
+    border: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 0 5%;
+
+}
+
+.file button {
+    background: #2a83d0;
+    width: 40%;
+    color: white;
+}
+
+.file button:hover {
+    background: #1e4999;
+}
+.file button:active {
+    background: #0b3472;
+    transition: none;
+}
+
+.task button {
+    background: #fff301;
+    color: black;
+}
+.task button:hover {
+    background: #d4b90e;
+}
+.task button:active {
+    background: #ac9607;
+    transition: none;
+}
+
+#info {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    font-family: "Courier New", serif;
+}
+
+.display-none {
+    display: none;
+}
