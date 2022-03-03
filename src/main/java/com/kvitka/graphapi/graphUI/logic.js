@@ -224,7 +224,7 @@ async function additionalTask() {
             for (let i = 0; i < length; i++) {
                 str += `${result[i]['v1'].name} ${result[i]['v2'].name}\n`;
             }
-            if (str === '') alert('Ðåçóëüòàò îòðèöàòåëüíûé');
+            if (str === '') alert('Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¹');
             else alert(str);
         })})
 }
@@ -341,6 +341,6 @@ function showEdges(edges) {
 
 let edgesAmount_ = 0;
 function showInfo() {
-    document.getElementById('info').innerHTML = `Âåðøèí: ${vertices.size}; Ð¸áåð: ${edgesAmount_}`;
+    document.getElementById('info').innerHTML = `Ð’ÐµÑ€ÑˆÐ¸Ð½: ${vertices.size}; Ð Ñ‘Ð±ÐµÑ€: ${edgesAmount_}`;
 }
 
