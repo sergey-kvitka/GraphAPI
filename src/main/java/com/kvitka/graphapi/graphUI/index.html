@@ -5,15 +5,15 @@
     </head>
     <body>
 
-        <p id="info">Вершин: 0; Рёбер: 0</p>
+        <p id="info">Р’РµСЂС€РёРЅ: 0; Р С‘Р±РµСЂ: 0</p>
 
         <div id="canvas" style="display: inline-block"></div>
 
         <div class="buttons" style="display: inline-block">
 
             <div class="create">
-                <button onclick="completeGraph()">Сделать граф полным</button>
-                <button onclick="addVertex()">Добавить вершину</button>
+                <button onclick="completeGraph()">РЎРґРµР»Р°С‚СЊ РіСЂР°С„ РїРѕР»РЅС‹Рј</button>
+                <button onclick="addVertex()">Р”РѕР±Р°РІРёС‚СЊ РІРµСЂС€РёРЅСѓ</button>
                 <div>
                     <label for="weightOfEdge"></label>
                     <input
@@ -21,85 +21,85 @@
                         type="number"
                         id="weightOfEdge"
                         style="width: 120px"
-                        placeholder="Вес ребра"
+                        placeholder="Р’РµСЃ СЂРµР±СЂР°"
                     />
-                    <button onclick="setWeight()">Изменить вес ребра</button><br/>
-                    <button onclick="addEdge()">Создать ребро</button>
+                    <button onclick="setWeight()">РР·РјРµРЅРёС‚СЊ РІРµСЃ СЂРµР±СЂР°</button><br/>
+                    <button onclick="addEdge()">РЎРѕР·РґР°С‚СЊ СЂРµР±СЂРѕ</button>
                     <label for="vertexOfNewEdge1"></label>
                     <input
                         class="numberInp"
                         type="number"
                         id="vertexOfNewEdge1"
-                        placeholder="Вершина 1"
+                        placeholder="Р’РµСЂС€РёРЅР° 1"
                     />
                     <label for="vertexOfNewEdge2"></label>
                     <input
                         class="numberInp"
                         type="number"
                         id="vertexOfNewEdge2"
-                        placeholder="Вершина 2"
+                        placeholder="Р’РµСЂС€РёРЅР° 2"
                     />
                 </div>
             </div>
 
             <div class="delete">
-                <button onclick="clearGraph()">Очистить</button>
-                <button onclick="deleteEdges()">Удалить все рёбра</button>
+                <button onclick="clearGraph()">РћС‡РёСЃС‚РёС‚СЊ</button>
+                <button onclick="deleteEdges()">РЈРґР°Р»РёС‚СЊ РІСЃРµ СЂС‘Р±СЂР°</button>
                 <div>
                     <label for="vertexOfEdgeToDelete1"></label>
                     <input
                             class="numberInp"
                             type="number"
                             id="vertexOfEdgeToDelete1"
-                            placeholder="Вершина 1"
+                            placeholder="Р’РµСЂС€РёРЅР° 1"
                     />
                     <label for="vertexOfEdgeToDelete2"></label>
                     <input
                             class="numberInp"
                             type="number"
                             id="vertexOfEdgeToDelete2"
-                            placeholder="Вершина 2"
+                            placeholder="Р’РµСЂС€РёРЅР° 2"
                     />
-                    <button onclick="deleteEdge()">Удалить ребро</button>
+                    <button onclick="deleteEdge()">РЈРґР°Р»РёС‚СЊ СЂРµР±СЂРѕ</button>
                 </div>
-                <button onclick="deleteLastVertex()">Удалить последнюю вершину</button>
+                <button onclick="deleteLastVertex()">РЈРґР°Р»РёС‚СЊ РїРѕСЃР»РµРґРЅСЋСЋ РІРµСЂС€РёРЅСѓ</button>
                 <div>
                     <input
                         class="numberInp"
                         type="number"
                         id="vertexToDelete"
-                        placeholder="Вершина"
+                        placeholder="Р’РµСЂС€РёРЅР°"
                     >
                     <label for="vertexToDelete">
-                        <button onclick="deleteDefiniteVertex()">Удалить определённую вершину</button>
+                        <button onclick="deleteDefiniteVertex()">РЈРґР°Р»РёС‚СЊ РѕРїСЂРµРґРµР»С‘РЅРЅСѓСЋ РІРµСЂС€РёРЅСѓ</button>
                     </label>
                 </div>
             </div>
 
             <div class="file">
                 <div>
-                    <button onclick="loadGraph_matrix()">Загрузить граф из файла (матрица смежности)</button>
-                    <button onclick="saveGraph_matrix()">Сохранить граф в файл (матрица смежности)</button>
+                    <button onclick="loadGraph_matrix()">Р—Р°РіСЂСѓР·РёС‚СЊ РіСЂР°С„ РёР· С„Р°Р№Р»Р° (РјР°С‚СЂРёС†Р° СЃРјРµР¶РЅРѕСЃС‚Рё)</button>
+                    <button onclick="saveGraph_matrix()">РЎРѕС…СЂР°РЅРёС‚СЊ РіСЂР°С„ РІ С„Р°Р№Р» (РјР°С‚СЂРёС†Р° СЃРјРµР¶РЅРѕСЃС‚Рё)</button>
                 </div>
                 <label for="filepathInput"></label>
                 <input
                     id="filepathInput"
                     style="width: 500px;"
-                    placeholder="Путь к файлу"
+                    placeholder="РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ"
                 >
                 <div>
-                    <button onclick="loadGraph_edgeList()">Загрузить граф из файла (список рёбер)</button>
-                    <button onclick="saveGraph_edgeList()">Сохранить граф в файл (список рёбер)</button>
+                    <button onclick="loadGraph_edgeList()">Р—Р°РіСЂСѓР·РёС‚СЊ РіСЂР°С„ РёР· С„Р°Р№Р»Р° (СЃРїРёСЃРѕРє СЂС‘Р±РµСЂ)</button>
+                    <button onclick="saveGraph_edgeList()">РЎРѕС…СЂР°РЅРёС‚СЊ РіСЂР°С„ РІ С„Р°Р№Р» (СЃРїРёСЃРѕРє СЂС‘Р±РµСЂ)</button>
                 </div>
             </div>
 
             <div class="task">
                 <button onclick="alert(
-                '16. Определить, существует ли в графе две вершины степени ' +
-                '3 с количеством вершин не менее 4-х смежные между собой.'
+                '16. РћРїСЂРµРґРµР»РёС‚СЊ, СЃСѓС‰РµСЃС‚РІСѓРµС‚ Р»Рё РІ РіСЂР°С„Рµ РґРІРµ РІРµСЂС€РёРЅС‹ СЃС‚РµРїРµРЅРё ' +
+                '3 СЃ РєРѕР»РёС‡РµСЃС‚РІРѕРј РІРµСЂС€РёРЅ РЅРµ РјРµРЅРµРµ 4-С… СЃРјРµР¶РЅС‹Рµ РјРµР¶РґСѓ СЃРѕР±РѕР№.'
                 )"><b>?</b></button>
-                <button onclick="additionalTask()">Дополнительное задание</button>
-                <button onclick="toggleEdgesWeight()">Скрыть/показать веса рёбер</button>
+                <button onclick="additionalTask()">Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРµ Р·Р°РґР°РЅРёРµ</button>
+                <button onclick="toggleEdgesWeight()">РЎРєСЂС‹С‚СЊ/РїРѕРєР°Р·Р°С‚СЊ РІРµСЃР° СЂС‘Р±РµСЂ</button>
             </div>
 
         </div>
