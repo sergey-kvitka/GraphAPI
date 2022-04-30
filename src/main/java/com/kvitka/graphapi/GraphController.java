@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("graph")
 public final class GraphController {
 
-    private MathGraph mathGraph;
+    private final MathGraph mathGraph;
     private Integer vertexName = 1;
 
     public GraphController() {
@@ -97,35 +97,6 @@ public final class GraphController {
     @DeleteMapping("delete_all_edges")
     public void deleteAllEdges() {
         mathGraph.clearEdges();
-    }
-
-    @PostMapping("create_graph_by_adjacency_matrix")
-    public void loadGraphFromFileWithMatrix(@RequestBody String filepath) {
-        mathGraph = MathGraph.createGraphByAdjacencyMatrix(formatStringFromJSON(filepath));
-        updateVertexName();
-    }
-
-    @PostMapping("create_graph_by_edge_list")
-    public void loadGraphFromFileWithEdgeList(@RequestBody String filepath) {
-        mathGraph = MathGraph.createGraphByEdgesList(formatStringFromJSON(filepath));
-        if (mathGraph.getVerticesAmount() == 0) return;
-        updateVertexName();
-    }
-
-    @PostMapping("write_adjacency_matrix_into_file")
-    public void writeAdjacencyMatrixIntoFile(@RequestBody String filepath) {
-        mathGraph.writeAdjacencyMatrixIntoFile(formatStringFromJSON(filepath));
-    }
-
-    @PostMapping("write_edge_list_into_file")
-    public void writeEdgeListIntoFile(@RequestBody String filepath) {
-        mathGraph.writeEdgeListIntoFile(formatStringFromJSON(filepath));
-    }
-
-    @GetMapping("has_edge_with_vertices_with_3_adjacent")
-    public List<Edge> hasEdgeWithVerticesWith3AdjacentVertices() {
-        System.out.println(mathGraph.hasEdgeWithVerticesWith3AdjacentVertices());
-        return mathGraph.hasEdgeWithVerticesWith3AdjacentVertices();
     }
 
     @PostMapping("set_edge_weight/{v1_name}/{v2_name}")

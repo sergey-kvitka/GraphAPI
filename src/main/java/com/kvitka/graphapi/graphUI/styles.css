@@ -2,9 +2,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background: url("img/wood.jpg");
+    background-size: cover;
 }
 
 #canvas {
+    background-image: url("img/forest.jpg");
+    background-size: cover;
     width: 800px;
     height: 800px;
     transform: translateX(-50%);
@@ -14,20 +18,25 @@ body {
 }
 
 .vertex {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
+    width: 80px;
+    height: 80px;
+    border: 3px solid white;
     border-radius: 50%;
     z-index: 11;
-    background: black;
+    background-image: url("img/mushroom1.png");
+    background-size: cover;
     color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
     position: absolute;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Arial Black", serif;
 }
 
 .vertex:hover {
-    box-shadow: 0 0 12px 2px rgba(0, 176, 255, 0.9);
+    box-shadow: 0 0 18px 2px rgb(210, 157, 157);
 }
 .chosenVertex {
     border: yellow;
@@ -40,10 +49,10 @@ body {
 }
 
 .edge {
-    color:      rgba(0, 0, 0, 0.5);
     border:     rgba(0, 0, 0, 1);
-    background: rgba(0, 0, 0, 0.5);
-    height: 4px;
+    background-image: url("img/path.png");
+    background-size: contain;
+    height: 20px;
     position: absolute;
     display: block;
     transform-origin: center center;
@@ -52,8 +61,8 @@ body {
 }
 
 .edge:hover {
-    color: #054a95;
-    background: #054a95;
+    background-image: url("img/path.png");
+    background-size: contain;
     box-shadow: 0 0 12px 0 rgba(0, 176, 255, 0.7);
     z-index: 10;
 }
@@ -76,12 +85,6 @@ body {
     margin: 5px;
 }
 
-.buttons div {
-    border: 2px solid black;
-    border-radius: 10px;
-
-}
-
 .buttons div div {
     width: fit-content;
 }
@@ -92,6 +95,7 @@ body {
     border-radius: 5px;
     padding-left: 10px;
     font-size: 18px;
+    background: white;
 }
 
 .buttons button {
@@ -193,8 +197,16 @@ body {
     bottom: 0;
     right: 20px;
     font-family: "Courier New", serif;
+    color: white;
+    background: black;
+    padding: 8px;
+    border-radius: 12px;
 }
 
 .display-none {
     display: none;
+}
+
+.buttons, .buttons * {
+    background: rgba(255, 255, 255, 0.3);
 }

@@ -76,30 +76,8 @@
                 </div>
             </div>
 
-            <div class="file">
-                <div>
-                    <button onclick="loadGraph_matrix()">Загрузить граф из файла (матрица смежности)</button>
-                    <button onclick="saveGraph_matrix()">Сохранить граф в файл (матрица смежности)</button>
-                </div>
-                <label for="filepathInput"></label>
-                <input
-                    id="filepathInput"
-                    style="width: 500px;"
-                    placeholder="Путь к файлу"
-                >
-                <div>
-                    <button onclick="loadGraph_edgeList()">Загрузить граф из файла (список рёбер)</button>
-                    <button onclick="saveGraph_edgeList()">Сохранить граф в файл (список рёбер)</button>
-                </div>
-            </div>
-
             <div class="task">
-                <button onclick="alert(
-                '16. Определить, существует ли в графе две вершины степени ' +
-                '3 с количеством вершин не менее 4-х смежные между собой.'
-                )"><b>?</b></button>
-                <button onclick="additionalTask()">Дополнительное задание</button>
-                <button onclick="toggleEdgesWeight()">Скрыть/показать веса рёбер</button>
+                <button style="margin: 10px 140px" onclick="toggleEdgesWeight()">Скрыть/показать веса рёбер</button>
             </div>
 
         </div>
