@@ -1,0 +1,16 @@
+version: '3'
+services:
+  graph-api:
+    build: .
+    restart: always
+    ports:
+      - 5555:5555
+    environment:
+      SERVER_PORT: 5555
+  graph-ui:
+    build:  src/main/java/com/kvitka/graphapi/graphUI
+    depends_on:
+      - graph-api
+    restart: always
+    ports:
+      - 80:80
