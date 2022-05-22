@@ -16,5 +16,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build Docker
-        run: docker-compose up -d
+      - name: Build Windows Artifact
+        run:
+          chmod +rwx ./target-scripts/create-artifact.sh | sudo ./target-scripts/create-artifact.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: win-dist
+          path: ./target/win
+      - uses: actions/upload-artifact@v3
+        with:
+          name: linux-dist
+          path: ./target/lin
