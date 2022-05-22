@@ -1,3 +1,3 @@
 spring:
   banner:
-    location:
+    location: banner-win.txt
