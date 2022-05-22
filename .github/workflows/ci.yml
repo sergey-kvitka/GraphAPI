@@ -23,3 +23,7 @@ jobs:
         with:
           name: win-dist
           path: ./target/win
+      - uses: actions/upload-artifact@v3
+        with:
+          name: linux-dist
+          path: ./target/lin
