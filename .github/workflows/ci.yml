@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build Windows Artifact
         run:
-          chmod 600 target-scripts/create-artifact.sh | target-scripts/create-artifact.sh
+          chmod +rwx target-scripts/create-artifact.sh | target-scripts/create-artifact.sh
       - uses: actions/upload-artifact@v3
         with:
           name: win-dist

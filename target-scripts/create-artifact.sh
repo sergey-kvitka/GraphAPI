@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt install -y unzip
+sudo apt install -y unzip zip
 
 mvn clean package -
 wget https://download.bell-sw.com/java/17.0.3+7/bellsoft-jre17.0.3+7-windows-amd64.zip
