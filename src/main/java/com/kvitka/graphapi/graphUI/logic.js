@@ -8,6 +8,7 @@ class Vertex {
     }
 }
 
+let MAX_VERTEX_AMOUNT = 200
 let CANVAS_SIZE = 800;
 let VERTEX_SIZE = 80;
 let EDGE_SIZE = 20;
@@ -71,6 +72,10 @@ async function getEdgesFromAPI() {
 }
 
 async function addVertex() {
+    if (VERTICES.size >= MAX_VERTEX_AMOUNT) {
+        alert(`Максимальное допустимое число вершин: ${MAX_VERTEX_AMOUNT}`);
+        return;
+    }
     fetch(getUrl('add_vertex'), {
             method: 'POST',
             headers: {
