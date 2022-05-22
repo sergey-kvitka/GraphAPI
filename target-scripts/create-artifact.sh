@@ -20,4 +20,5 @@ mkdir target/lin
 cp target/*.jar target/lin/app.jar
 cp -r jre-linux target/lin/
 cp target-scripts/run-linux.sh target/lin/
+chmod +rwx target/lin/jre-linux/bin/java
 chmod +rwx target/lin/run-linux.sh
