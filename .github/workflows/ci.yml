@@ -1,0 +1,24 @@
+name: Java CI
+
+on:
+  pull_request:
+    branches:
+      - 'master'
+  push:
+    branches:
+      - 'feature/**'
+      - 'hotfix/**'
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Windows Artifact
+        run: target-scripts/create-artifact.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: win-dist
+          path: win-dist.zip

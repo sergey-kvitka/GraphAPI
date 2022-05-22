@@ -1,0 +1,6 @@
+Risovalka Application
+${AnsiColor.BRIGHT_MAGENTA}Ver. 1.0
+
+Application available at ${AnsiColor.RED}http://localhost:5555/
+${AnsiColor.WHITE}
+Close the window to stop the application...
