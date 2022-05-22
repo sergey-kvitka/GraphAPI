@@ -7,6 +7,6 @@ mv jre-17.0.3 jre
 
 #WINDOWS
 mkdir target/win
-copy target/*.jar target/win/app.jar
-copy -r jre target/win/app/
-copy target-scripts/run-win.bat target/win/
+cp target/*.jar target/win/app.jar
+cp -r jre target/win/
+cp target-scripts/run-win.bat target/win/

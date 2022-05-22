@@ -22,4 +22,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: win-dist
-          path: win-dist.zip
+          path: ./target/win
